@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@500&family=Neonderthaw&family=Red+Hat+Mono:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(45deg, rgb(65, 88, 208) 0%, rgb(200, 88, 192) 50%, rgb(255, 204, 112) 100%);
+  font-family: 'Red Hat Mono', monospace;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add-expense{
+  width: 600px;
+  height: auto;
+  background-color: cornflowerblue;
+  border: 1px cornflowerblue solid;
+  border-radius: 6px;
+  margin-left: 30%;
+  margin-top: 100px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input {
+  width: 400px;
+}
+.name-item{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  
+}
+.amount-item{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  
+}
+.date-item{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  
+}
+input{
+  border-radius: 6px;
+  border: none;
+}
+button{
+  display: flex;
+  margin-left: 300px;
+  margin-bottom: 10px ;
+  border-radius: 6px;
+  padding-left: 10px;
+  border: none;
+  width: 50px;
+  background-color: burlywood;
+  cursor: pointer;
+}
+.list-expense{
+  width: 600px;
+  height: auto;
+  margin-left: 30%;
+  background-color: bisque;
+  margin-top: 30px;
+  border-radius: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.item{
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: none;
+  border-radius: 6px;
+  margin: 20px;
+  width: 560px;
+  background-color: cadetblue;
 }
 
-.App-link {
-  color: #61dafb;
+.time{
+  margin: 10px;
+  border: 2px solid blueviolet;
+  padding: 2px;
+  border-radius: 6px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.price{
+  width: auto;
+  height: auto;
+  background-color:  rgb(200, 88, 192);
+  border-radius: 6px;
+  padding: 5px;
+  margin: 10px;
+}
+.filter{
+  width: 600px;
+  margin-left: 30%;
+  background-color: bisque;
+  margin-top: 30px;
+  border-radius: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.year{
+  margin-right: 20px;
+  width: 100px;
+  height: 30px;
+  font-weight: bold;
+  padding-left: 30px;
 }
