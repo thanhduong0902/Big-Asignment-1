@@ -13,8 +13,10 @@ function Additem(props) {
   const dateChange = (e) => {
     setDate(e.target.value);
   };
-  return (
-    <div className="add-expense">
+  const [isAdd, setIsAdd] = useState(false);
+  let button = null;
+  if (isAdd) {
+    button = (
       <form>
         <div className="name-item">
           Name
@@ -46,18 +48,35 @@ function Additem(props) {
             onChange={dateChange}
           />
         </div>
-        <button
-          className="add"
-          onClick={(e) => {
-            e.preventDefault();
-            props.additem(value, amount, date);
-          }}
-        >
-          ADD
-        </button>
+        <div className="btn">
+          <button
+            onClick={() => {
+              setIsAdd(false);
+            }}
+          >
+            CANCEL
+          </button>
+          <button
+            className="add"
+            onClick={(e) => {
+              e.preventDefault();
+              props.additem(value, amount, date);
+            }}
+          >
+            ADD
+          </button>
+        </div>
       </form>
-    </div>
-  );
+    );
+  } else {
+    button = (
+      <button className="add-new" onClick={() => setIsAdd(true)}>
+        ADD NEW EXPENSE
+      </button>
+    );
+  }
+  return <div className="add-expense">{button}</div>;
 }
 
 export default Additem;
+
